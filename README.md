@@ -45,7 +45,7 @@ ___
 - Elixir suporta metaprogramação;
 - Elixir é dinâmico, então a variável não precisa ser declarada;
 - O nome da variável deve começar com undescore ou caractere minúsculo;
-- Variáveis ​​são geralmente escritas em minúsculas com palavras separadas por undescores;
+- Variáveis ​​são geralmente escritas em minúsculo com palavras separadas por undescores;
 - Os nomes podem conter `!` E `?`:
   - grand_total;
   - _options;
@@ -131,9 +131,9 @@ ___
 
 ### Conhecendo um pouco mais o IEx
 
-- Para sabe mais clique [aqui](https://hexdocs.pm/iex/IEx.html);
+- Para saber mais clique [aqui](https://hexdocs.pm/iex/IEx.html);
 - Existem diversos `Helpers no IEx` que podem ser acessados ditando-se o `h()`:
-  - Todos os `helpers` são mostrados com a sua respectiva aridade da funções;
+  - Todos os `helpers` são mostrados com a sua respectiva aridade da função;
   - Podemos `pedir ajuda` sobre qualquer módulo ou função, bastando para isso invocar o `h(<nome do módulo ou função>)`. Ex: h(Enum) ou h(Enum.map);
   - Podemos `inspecionar` qualquer valor usando `i(<valor>)`. Ex: i("olá");
   - Existem vários outros helpers como o `i/1` para `inspecionar` um elemento ou o `r/1`, que nesse caso permite `recompilar` um módulo informado;
@@ -189,38 +189,6 @@ ___
 
 - Funções para checar os tipos (is_integer, is_string, is_atom, etc)
 - Para saber mais sobre as operações básicas clique [aqui](https://elixirschool.com/pt/lessons/basics/basics/#opera%C3%A7%C3%B5es-b%C3%A1sicas).
-
-___
-
-### Interations
-
-___
-
-### Control flow & Error Handling
-
-___
-
-### Process
-
-___
-
-### GenServer
-
-___
-
-### Applications & Mix Tool
-
-___
-
-### Fault Tolerance
-
-___
-
-### Distribution, Tasks, and Agents
-
-___
-
-### Metaprogramming
 
 ___
 
