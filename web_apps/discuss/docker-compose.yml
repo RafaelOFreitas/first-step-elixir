@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: 'discuss_dev'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+    ports:
+      - '5432:5432'
+    volumes:
+      - './data/postgres:/var/lib/postgresql/data'
+    networks:
+      - postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment: 
+        PGADMIN_DEFAULT_EMAIL: 'rafa.oliveirafreitas@hotmail.com'
+        PGADMIN_DEFAULT_PASSWORD: 'postgres'
+    ports:
+      - '16543:80'
+    depends_on:
+      - postgres
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    name: discuss
+    driver: bridge
