@@ -212,21 +212,13 @@ ___
   
 ___
 
-## [Phoenix Framework](https://hexdocs.pm/phoenix/Phoenix.html)
+### Phoenix Framework Visão geral
 
-### Visão geral
-
-Phoenix é uma estrutura de desenvolvimento web escrita em Elixir que implementa o padrão Model View Controller (MVC) do lado do servidor. Muitos de seus componentes e conceitos parecerão familiares para aqueles de nós com experiência em outros frameworks web, como Ruby on Rails ou Django do Python.
+Phoenix é uma estrutura de desenvolvimento web escrita em Elixir que implementa o padrão Model View Controller (MVC) do lado do servidor.
+Muitos de seus componentes e conceitos parecerão familiares para aqueles de nós com experiência em outros frameworks web, como Ruby on Rails ou Django do Python.
 Para continuar com o `Overview` completo clique [aqui](https://hexdocs.pm/phoenix/overview.html).
 
-### Phoenix Keywords
-
-- Import
-  - Tire todas as funções deste módulo e dê-as a este outro módulo.
-- Alias
-  - Dê-me um atalho para este outro módulo, meus dedos são preguiçosos.
-- Use
-  - Eu quero fazer uma configuração muito, muito ... muito chique.
+- Para entender mais sobre o framework, leia a [documentação](https://hexdocs.pm/phoenix/Phoenix.html)
 
 ___
 
@@ -238,6 +230,5 @@ ___
 - [Learn Elixir: The Ultimate Guide](https://serokell.medium.com/learn-elixir-the-ultimate-guide-2ce49b78f20b);
 - [Introduction to Erlang](https://serokell.io/blog/introduction-to-erlang);
 - [Why developers are falling in love with functional programming](https://towardsdatascience.com/why-developers-are-falling-in-love-with-functional-programming-13514df4048e).
-
 
 Have fun! ❤️
