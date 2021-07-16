@@ -14,7 +14,7 @@ Segunda lib com Elixir, foram utilizados conceitos bases, como:
     mix deps.get
   ```
 
-- Para o projeto foi utilizada a seguinte `dep`:
+- Foi utilizada a seguinte dependência:
   - [ex_doc](https://github.com/elixir-lang/ex_doc)
   
   ```elixir
@@ -37,7 +37,7 @@ Segunda lib com Elixir, foram utilizados conceitos bases, como:
     mix test
   ```
 
-- Para inicializar o projeto, basta executar as seguintes instrunções:
+- Para inicializar o projeto, basta executar as seguintes instruções:
   
   ```elixir
     iex -S mix 
@@ -45,7 +45,5 @@ Segunda lib com Elixir, foram utilizados conceitos bases, como:
   ```
 
 `OBS: Leia a documentação para saber como utilizar a lib`
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 
 Have fun! ❤️

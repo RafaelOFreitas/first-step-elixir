@@ -13,13 +13,13 @@ Primeira lib com Elixir, foram utilizados conceitos bases, como:
 
 ## Para rodar o projeto
 
-- Vamos começar baixando as depêndencias necessárias para o projeto.
+- Vamos começar baixando as depêndencias necessárias.
   
   ```terminal
     mix deps.get
   ```
 
-- Para o projeto foram utilizadas as seguintes `deps`:
+- Foram utilizadas as seguintes dependências:
   - [nimble_csv](https://github.com/dashbitco/nimble_csv)
   - [faker](https://github.com/elixirs/faker)
   - [scribe](https://github.com/codedge-llc/scribe)
@@ -43,13 +43,11 @@ Primeira lib com Elixir, foram utilizados conceitos bases, como:
 `OBS: Os dados não são alterados ao rodar este comando e sim inseridos (append).`
 `OBS: Na raiz do projeto no arquivo friends.csv disponibilizei alguns dados.`
 
-- Para inicializar o projeto, basta executar as seguintes instrunções:
+- Para inicializar o projeto, basta executar as seguintes instruções:
   
   ```elixir
     iex -S mix 
     ContactBook.init
   ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 
 Have fun! ❤️

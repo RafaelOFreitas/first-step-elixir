@@ -12,13 +12,13 @@ Terceira lib com Elixir, foram utilizados conceitos bases, como:
   
 ## Para rodar o projeto
 
-- Vamos começar baixando as depêndencias necessárias para o projeto.
+- Vamos começar baixando as depêndencias necessárias.
   
   ```terminal
     mix deps.get
   ```
 
-- Para o projeto foi utilizada a seguinte `dep`:
+- Foi utilizada a seguinte dependência:
   - [ex_doc](https://github.com/elixir-lang/ex_doc)
   
   ```elixir
@@ -29,7 +29,7 @@ Terceira lib com Elixir, foram utilizados conceitos bases, como:
     end
   ```
 
-- Para inicializar o projeto, basta executar as seguintes instrunções:
+- Para inicializar o projeto, basta executar as seguintes instruções:
   
   ```elixir
     iex -S mix 
@@ -37,7 +37,5 @@ Terceira lib com Elixir, foram utilizados conceitos bases, como:
   ```
 
 `OBS: Com isso um novo Identicon será gerado na pasta generated.`
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 
 Have fun! ❤️
