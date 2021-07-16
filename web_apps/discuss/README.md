@@ -54,6 +54,33 @@ ___
     - Controller.HTML
     - DiscussWeb.Router.Helpers
   
-### Conn
+___
 
-- What is Conn?
+### Fluxo Request Phoenix
+
+1. Solicitação de entrada;
+2. Verificação de solicitação HTML;
+3. Verificação de sessão;
+4. Verificação de segurança;
+5. Inclusão de cabeçalhos HTTP ao navegador;
+6. Verificação de acesso da solicitação;
+7. Formulação de solicitação de retorno.
+
+___
+
+### Validação de dados
+
+- Struct
+  - Um hash que contém alguns dados.
+  - Representa um registro (ou um registro que queremos salvar) no banco de dados.
+- Params
+  - Um hash que contém as propriedades com as quais queremos atualizar a estrutura.
+- Cast
+  - Produz um conjunto de alterações (Changeset).
+- Validators
+  - Adiciona erros ao conjunto de alterações (Changeset).
+- Changeset
+  - Sabe dos dados que estamos tentando salvar e se há ou não problemas de validação com eles.
+- [Veja mais aqui](https://hexdocs.pm/phoenix/ecto.html).
+
+Have fun! ❤️
