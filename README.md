@@ -192,6 +192,44 @@ ___
 
 ___
 
+### Visão dos primeiros fontes com Elixir
+
+- Contact Book
+  - Lib que gerencia uma lista de amigos;
+  - CRUD simples utilizando CSV;
+  - Manipulação dos dados pelo terminal;
+  - Para saber mais clique [aqui](/apps/contact_book/README.md).
+
+- Cards
+  - Lib que funciona como um dealer para jogos de cartas;
+  - Funcionalidades simples, com testes unitários e documentação que sugere a técnica de BDD.
+  - Para saber mais clique [aqui](/apps/cards/README.md).
+
+- Identicon
+  - Lib que gera Identicon's;
+  - Funcionalidades simples, com manipulação de imagens.
+  - Para saber mais clique [aqui](/apps/identicon/README.md).
+  
+___
+
+## [Phoenix Framework](https://hexdocs.pm/phoenix/Phoenix.html)
+
+### Visão geral
+
+Phoenix é uma estrutura de desenvolvimento web escrita em Elixir que implementa o padrão Model View Controller (MVC) do lado do servidor. Muitos de seus componentes e conceitos parecerão familiares para aqueles de nós com experiência em outros frameworks web, como Ruby on Rails ou Django do Python.
+Para continuar com o `Overview` completo clique [aqui](https://hexdocs.pm/phoenix/overview.html).
+
+### Phoenix Keywords
+
+- Import
+  - Tire todas as funções deste módulo e dê-as a este outro módulo.
+- Alias
+  - Dê-me um atalho para este outro módulo, meus dedos são preguiçosos.
+- Use
+  - Eu quero fazer uma configuração muito, muito ... muito chique.
+
+___
+
 ### Referências
 
 - [Elixir and The Beam: How Concurrency Really Works](https://medium.com/flatiron-labs/elixir-and-the-beam-how-concurrency-really-works-3cc151cddd61);
@@ -199,4 +237,7 @@ ___
 - [Learn With Me: Elixir](https://inquisitivedeveloper.com/tag/lwm-elixir/);
 - [Learn Elixir: The Ultimate Guide](https://serokell.medium.com/learn-elixir-the-ultimate-guide-2ce49b78f20b);
 - [Introduction to Erlang](https://serokell.io/blog/introduction-to-erlang);
-- [Why developers are falling in love with functional programming](https://towardsdatascience.com/why-developers-are-falling-in-love-with-functional-programming-13514df4048e);
+- [Why developers are falling in love with functional programming](https://towardsdatascience.com/why-developers-are-falling-in-love-with-functional-programming-13514df4048e).
+
+
+Have fun! ❤️

@@ -1,21 +1,51 @@
 # Cards
 
-**TODO: Add description**
+Segunda lib com Elixir, foram utilizados conceitos bases, como:
 
-## Installation
+- Utilização de lib para documentação;
+- Criação de testes unitários;
+- Criação de testes unitários por meio da documentação gerada.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `cards` to your list of dependencies in `mix.exs`:
+## Para rodar o projeto
 
-```elixir
-def deps do
-  [
-    {:cards, "~> 0.1.0"}
-  ]
-end
-```
+- Vamos começar baixando as depêndencias necessárias para o projeto.
+  
+  ```terminal
+    mix deps.get
+  ```
+
+- Para o projeto foi utilizada a seguinte `dep`:
+  - [ex_doc](https://github.com/elixir-lang/ex_doc)
+  
+  ```elixir
+    defp deps do
+      [
+        {:ex_doc, "~> 0.24"}, # ExDoc é uma ferramenta para gerar documentação para seus projetos Elixir.
+      ]
+    end
+  ```
+
+- Para geração da documentação, basta executar o seguinte comando:
+  
+  ```elixir
+    mix docs
+  ```
+
+- Para executar os testes, , basta executar o seguinte comando:
+
+  ```elixir
+    mix test
+  ```
+
+- Para inicializar o projeto, basta executar as seguintes instrunções:
+  
+  ```elixir
+    iex -S mix 
+    Cards.create_deck
+  ```
+
+`OBS: Leia a documentação para saber como utilizar a lib`
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/cards](https://hexdocs.pm/cards).
 
+Have fun! ❤️

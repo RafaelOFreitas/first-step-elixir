@@ -1,21 +1,43 @@
 # Identicon
 
-**TODO: Add description**
+Um Identicon é uma representação visual de um valor hash, geralmente de números IP, servindo para identificar um usuário sistema; semelhante a avatares. O Identicon original consiste de uma gráfico de 9 blocos, que então foi estendido a outros gráficos por outras criações, algumas usando MD5 em vez do endereço de IP.
 
-## Installation
+Terceira lib com Elixir, foram utilizados conceitos bases, como:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `identicon` to your list of dependencies in `mix.exs`:
+- Utilização de structs para modelagem de dados;
+- Utilização de Maps e funções de manipulação desta estrutura;
+- Manipulação de funções do `Erlang` (`:crypto.hash`, `:binary`);
+- Manipulação de comandos do `SO`.
+- Manipulação de imagens com o módulo [egd](http://erlang.org/documentation/doc-6.1/lib/percept-0.8.9/doc/html/egd.html) do `Erlang`.
+  
+## Para rodar o projeto
 
-```elixir
-def deps do
-  [
-    {:identicon, "~> 0.1.0"}
-  ]
-end
-```
+- Vamos começar baixando as depêndencias necessárias para o projeto.
+  
+  ```terminal
+    mix deps.get
+  ```
+
+- Para o projeto foi utilizada a seguinte `dep`:
+  - [ex_doc](https://github.com/elixir-lang/ex_doc)
+  
+  ```elixir
+    defp deps do
+      [
+        {:egd, github: "erlang/egd"}, # Módulo Erlang para manipulação gráfica.
+      ]
+    end
+  ```
+
+- Para inicializar o projeto, basta executar as seguintes instrunções:
+  
+  ```elixir
+    iex -S mix 
+    Identicon.main "banana"
+  ```
+
+`OBS: Com isso um novo Identicon será gerado na pasta generated.`
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/identicon](https://hexdocs.pm/identicon).
 
+Have fun! ❤️
