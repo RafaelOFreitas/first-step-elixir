@@ -8,7 +8,7 @@ defmodule DiscussWeb.Topic do
   end
 
   @doc false
-  def changeset(%Topic{} = topic, attrs \\ %{}) do
+  def changeset(topic, attrs \\ %{}) do
     topic
     |> cast(attrs, [:title])
     |> validate_required([:title])
