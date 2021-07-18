@@ -4,13 +4,13 @@ defmodule DiscussWeb.Topic do
   alias DiscussWeb.Topic
 
   schema "topics" do
-    field :title, :string
+    field(:title, :string)
   end
 
   @doc false
-  def changeset(topic, attrs \\ %{}) do
-    topic
-    |> cast(attrs, [:title])
+  def changeset(struct, params \\ %{}) do
+    struct
+    |> cast(params, [:title])
     |> validate_required([:title])
   end
 end

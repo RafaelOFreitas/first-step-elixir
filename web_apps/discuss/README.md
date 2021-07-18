@@ -11,6 +11,9 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
+- Crie o aplicativo GitHub OAuth e obtenha credenciais ✨
+Crie seu aplicativo GitHub e baixe as chaves de API seguindo as instruções: [create-github-app-guide.md](https://github.com/dwyl/elixir-auth-github/blob/master/create-github-app-guide.md)
+
 ## Learn more
 
 - Official website: https://www.phoenixframework.org/

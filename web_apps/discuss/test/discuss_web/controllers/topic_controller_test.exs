@@ -1,4 +1,4 @@
-defmodule DiscussWeb.PageControllerTest do
+defmodule DiscussWeb.TopicControllerTest do
   use DiscussWeb.ConnCase
 
   test "GET /", %{conn: conn} do
