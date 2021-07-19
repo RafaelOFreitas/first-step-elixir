@@ -3,10 +3,12 @@ defmodule DiscussWeb.AuthController do
 
   alias DiscussWeb.User
 
-  def index(conn, _params) do
+  def request(conn, _params) do
     oauth_github_url = ElixirAuthGithub.login_url(%{scopes: ["user:email"]})
 
-    render(conn, "auth.html", oauth_github_url: oauth_github_url)
+    conn
+    |> Plug.Conn.resp(:found, "")
+    |> Plug.Conn.put_resp_header("location", oauth_github_url)
   end
 
   def callback(conn, %{"code" => code}) do
@@ -34,7 +36,7 @@ defmodule DiscussWeb.AuthController do
       {:ok, user} ->
         conn
         |> put_flash(:info, "Successfully authenticated! " <> user.name)
-        |> put_session(:current_user, user)
+        |> put_session(:user_id, user.id)
         |> configure_session(renew: true)
         |> redirect(to: Routes.topic_path(conn, :index))
 

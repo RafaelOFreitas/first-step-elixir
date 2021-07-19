@@ -1,30 +1,26 @@
 # Discuss
 
-To start your Phoenix server:
+- Um CRUD simples utilizando `Postgres`;
+- Utilzação de SSR.
+- Autenticação via GitHub;
+- Criação de Plugins para controle de requisição AAA (autenticação/autorização).
+- Criação de WebSocket para transmição de mensagens (comentários de posts) clientes conectados.
 
-- Install dependencies with `mix deps.get`
-- Create and migrate your database with `mix ecto.setup`
-- Install Node.js dependencies with `npm install` inside the `assets` directory
-- Start Phoenix endpoint with `mix phx.server`
+## Para iniciar seu servidor Phoenix
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- Crie seu aplicativo GitHub e baixe as chaves de API seguindo as instruções: [create-github-app-guide.md](https://github.com/dwyl/elixir-auth-github/blob/master/create-github-app-guide.md)
+- Disponibilizei o arquivo `docker-compose.yml`, para que você não precise configurar o banco de dados `Postgres` ou o client `pgAdim`.
+  - Execute `docker-compose up` na raiz do projeto, com o `docker` inicializado.
+- Instale dependências com `mix deps.get`
+- Crie e migre seu banco de dados com `mix ecto.setup`
+- Instale as dependências do Node.js com `npm install` dentro do diretório `assets`
+- Inicie o endpoint Phoenix com `mix phx.server`
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-- Crie o aplicativo GitHub OAuth e obtenha credenciais ✨
-Crie seu aplicativo GitHub e baixe as chaves de API seguindo as instruções: [create-github-app-guide.md](https://github.com/dwyl/elixir-auth-github/blob/master/create-github-app-guide.md)
-
-## Learn more
-
-- Official website: https://www.phoenixframework.org/
-- Guides: https://hexdocs.pm/phoenix/overview.html
-- Docs: https://hexdocs.pm/phoenix
-- Forum: https://elixirforum.com/c/phoenix-forum
-- Source: https://github.com/phoenixframework/phoenix
+Agora você pode visitar [`localhost:4000`](http://localhost:4000) do seu navegador.
 
 ___
 
-### Phoenix Keywords
+## Phoenix Keywords
 
 Na minha visão essa é uma ótima definição sobre esse conjunto de palavras chaves.
 
@@ -86,4 +82,15 @@ ___
   - Sabe dos dados que estamos tentando salvar e se há ou não problemas de validação com eles.
 - [Veja mais aqui](https://hexdocs.pm/phoenix/ecto.html).
 
+___
+
+## Saber mais
+
+- Official website: https://www.phoenixframework.org/
+- Guides: https://hexdocs.pm/phoenix/overview.html
+- Docs: https://hexdocs.pm/phoenix
+- Forum: https://elixirforum.com/c/phoenix-forum
+- Source: https://github.com/phoenixframework/phoenix
+- [Phoenix-bootcamp](https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/)
+  
 Have fun! ❤️

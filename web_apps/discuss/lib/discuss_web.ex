@@ -17,6 +17,16 @@ defmodule DiscussWeb do
   and import those modules here.
   """
 
+  def model do
+    quote do
+      use Ecto.Schema
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+    end
+  end
+
   def controller do
     quote do
       use Phoenix.Controller, namespace: DiscussWeb
@@ -25,6 +35,8 @@ defmodule DiscussWeb do
       import DiscussWeb.Gettext
 
       alias Discuss.Repo
+      import Ecto
+      import Ecto.Query
       alias DiscussWeb.Router.Helpers, as: Routes
     end
   end
@@ -37,7 +49,7 @@ defmodule DiscussWeb do
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
-        only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
+        only: [get_csrf_token: 0, get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
 
       # Include shared imports and aliases for views
       unquote(view_helpers())
@@ -56,6 +68,10 @@ defmodule DiscussWeb do
   def channel do
     quote do
       use Phoenix.Channel
+
+      alias Discuss.Repo
+      import Ecto
+      import Ecto.Query
       import DiscussWeb.Gettext
     end
   end

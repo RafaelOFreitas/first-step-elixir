@@ -1,10 +1,10 @@
 defmodule DiscussWeb.Topic do
-  use Ecto.Schema
-  import Ecto.Changeset
-  alias DiscussWeb.Topic
+  use DiscussWeb, :model
 
   schema "topics" do
     field(:title, :string)
+    belongs_to(:user, DiscussWeb.User)
+    has_many(:comments, DiscussWeb.Comment)
   end
 
   @doc false
