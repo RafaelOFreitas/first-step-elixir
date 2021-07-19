@@ -220,6 +220,10 @@ Para continuar com o `Overview` completo clique [aqui](https://hexdocs.pm/phoeni
 
 - Para entender mais sobre o framework, leia a [documentação](https://hexdocs.pm/phoenix/Phoenix.html)
 
+- Projeto Discuss
+  - CRUD com Postgres.
+  - Para saber mais clique [aqui](/web_apps/discuss/README.md).
+  
 ___
 
 ### Referências
