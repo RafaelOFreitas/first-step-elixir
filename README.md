@@ -223,6 +223,9 @@ Para continuar com o `Overview` completo clique [aqui](https://hexdocs.pm/phoeni
 - Projeto Discuss
   - CRUD com Postgres.
   - Para saber mais clique [aqui](/web_apps/discuss/README.md).
+- Projeto ExClient
+  - Integração API GitHub com Tesla.
+  - Para saber mais clique [aqui](/web_apps/ex_client).
   
 ___
 
