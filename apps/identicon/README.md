@@ -1,6 +1,7 @@
 # Identicon
 
-Um Identicon é uma representação visual de um valor hash, geralmente de números IP, servindo para identificar um usuário sistema; semelhante a avatares. O Identicon original consiste de uma gráfico de 9 blocos, que então foi estendido a outros gráficos por outras criações, algumas usando MD5 em vez do endereço de IP.
+Um Identicon é uma representação visual de um valor hash, geralmente de números IP, servindo para identificar um usuário sistema, semelhante a avatares. 
+O Identicon original consiste de uma gráfico de 9 blocos, que então foi estendido a outros gráficos por outras criações, algumas usando MD5 em vez do endereço de IP.
 
 Terceira lib com Elixir, foram utilizados conceitos bases, como:
 

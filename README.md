@@ -4,7 +4,7 @@
 
 - Linguagem de programação funcional introduzida em 1986 por Ericsson;
   - Sistemas de telecomunicações.
-- Destina-se a construir sistemas confiáveis, de alto desempenho, escalonáveis ​​e tolerantes a falhas;
+- Destina-se a construir sistemas confiáveis, de alto desempenho, escaláveis ​​e tolerantes a falhas;
   - Usado no WhatsApp, Heroku, RabbitMQ.
 - Orientado para simultaneidade:
   - Pode ter milhares de processos isolados;
@@ -20,11 +20,31 @@
   
 ___
 
+## Processos na BEAM
+
+- Escalabilidade;
+- Tolerância à falhas;
+- Distribuição;
+- Processo do sistema operacional vs Processo da BEAM;
+  - Os processos são muito leves;
+  - Criados em questões de microsegundos e utiliza poucos kbytes;
+  - Processos do SO gastam alguns Megabytes.
+- Cada thread executa de forma concorrente;
+- Um scheduler por núcleo da CPU;
+  - A máquina virtual roda em um único processo do sistema operacional;
+  - Cada scheduler pode criar milhares de processos. 
+  - O limite teórico é de 134 milhões.
+
+___
+
 ## Elixir
 
 - [Elixir](https://elixir-lang.org/) é uma [Linguagem de programação](https://github.com/elixir-lang/elixir) funcional para a construção de aplicativos escaláveis ​​e de fácil manutenção;
   - Apresentada em 2012 por José Valim [@josevalim](https://github.com/josevalim).
-- Elixir aproveita o [Erlang VM](http://erlang.org/faq/implementations.html), conhecido por executar sistemas de baixa latência, distribuídos e tolerantes a falhas;
+- Elixir aproveita o [Erlang VM](http://erlang.org/faq/implementations.html);
+  - Conhecido por executar sistemas de baixa latência, distribuídos e tolerantes a falhas;
+  - Em 2018, rodava 90% de todo o tráfego da Internet.
+- Pode usar todo poder computacional disponível;
 - Permite escrever um código mais limpo e expressivo;
   - O código é geralmente dividido em muitas funções pequenas.
 - Você ainda tem acesso a todos os recursos do Erlang;
@@ -39,6 +59,8 @@ ___
   - Comparando, por exemplo, com a comunidade do javascript, python ou ruby, por exemplo.
 - Todos os dados são imutáveis;
   - Muito importante devido à natureza orientada para a simultaneidade do Elixir;
+  - Redução de efeitos colaterais;
+  - Concorrência e Paralelismo;
   - Se você precisar alterar os dados, você produz sua cópia;
   - Basicamente, você transforma os dados e a programação funcional trata-se disso.
 - Não há ciclo (apenas recursão);
@@ -52,7 +74,7 @@ ___
   - my_file;
   - valid?.
 - [Introdução completa](https://elixir-lang.org/getting-started/introduction.html).
-  
+
 ___
 
 ## Princípios da Programação Funcional
@@ -199,16 +221,18 @@ ___
   - CRUD simples utilizando CSV;
   - Manipulação dos dados pelo terminal;
   - Para saber mais clique [aqui](/apps/contact_book/README.md).
-
 - Cards
   - Lib que funciona como um dealer para jogos de cartas;
   - Funcionalidades simples, com testes unitários e documentação que sugere a técnica de BDD.
   - Para saber mais clique [aqui](/apps/cards/README.md).
-
 - Identicon
   - Lib que gera Identicon's;
   - Funcionalidades simples, com manipulação de imagens.
   - Para saber mais clique [aqui](/apps/identicon/README.md).
+- Reports Generator
+  - Utilização lib Credo para análise sintática do fonte.
+  - Uso de Tasks para leitura de dados a partir de arquivos `.csv`
+  - Para saber mais clique [aqui](/apps/reports_generator/README.md).
   
 ___
 
