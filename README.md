@@ -216,15 +216,17 @@ ___
 
 ### Visão dos primeiros fontes com Elixir
 
+- Cards
+  - Lib que funciona como um dealer para jogos de cartas;
+  - Funcionalidades simples, com testes unitários e documentação que sugere a técnica de BDD.
+  - Para saber mais clique [aqui](/apps/cards/README.md).
 - Contact Book
   - Lib que gerencia uma lista de amigos;
   - CRUD simples utilizando CSV;
   - Manipulação dos dados pelo terminal;
   - Para saber mais clique [aqui](/apps/contact_book/README.md).
-- Cards
-  - Lib que funciona como um dealer para jogos de cartas;
-  - Funcionalidades simples, com testes unitários e documentação que sugere a técnica de BDD.
-  - Para saber mais clique [aqui](/apps/cards/README.md).
+- Exlivery
+  - Para saber mais clique [aqui](/apps/exlivery/README.md).
 - Identicon
   - Lib que gera Identicon's;
   - Funcionalidades simples, com manipulação de imagens.
@@ -249,7 +251,10 @@ Para continuar com o `Overview` completo clique [aqui](https://hexdocs.pm/phoeni
   - Para saber mais clique [aqui](/web_apps/discuss/README.md).
 - Projeto ExClient
   - Integração API GitHub com Tesla.
-  - Para saber mais clique [aqui](/web_apps/ex_client).
+  - Para saber mais clique [aqui](/web_apps/ex_client/README.md).
+- Projeto Rockelivery
+  - Crud simples, utilizando boas práticas e design patterns.
+  - Para saber mais clique [aqui](/web_apps/rockelivery/README.md).
   
 ___
 

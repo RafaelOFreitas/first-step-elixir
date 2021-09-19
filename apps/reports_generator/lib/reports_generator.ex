@@ -60,7 +60,7 @@ defmodule ReportsGenerator do
     Map.merge(map1, map2, fn _key, value1, value2 -> value1 + value2 end)
   end
 
-  defp report_acc() do
+  defp report_acc do
     foods = Enum.into(@available_foods, %{}, &{&1, 0})
     users = Enum.into(1..30, %{}, &{Integer.to_string(&1), 0})
 
