@@ -1,10 +1,10 @@
 defmodule Exlivery do
   alias Exlivery.Orders.Agent, as: OrderAgent
   alias Exlivery.Orders.CreateOrUpdate, as: CreateOrUpdateOrder
-  alias Exlivery.Users.CreateOrUpdate, as: CreateOrUpdateUser
   alias Exlivery.Users.Agent, as: UserAgent
+  alias Exlivery.Users.CreateOrUpdate, as: CreateOrUpdateUser
 
-  def start_agents() do
+  def start_agents do
     UserAgent.start_link(%{})
     OrderAgent.start_link(%{})
   end
