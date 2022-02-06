@@ -8,7 +8,7 @@ defmodule Rockelivery.UserTest do
 
   describe "changeset/2" do
     test "when all params are valid, returns a valid changeset" do
-      params = build(:user_params)
+      params = params_for(:user)
 
       response = User.changeset(params)
 

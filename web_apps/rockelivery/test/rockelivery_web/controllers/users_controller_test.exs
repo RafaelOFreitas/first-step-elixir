@@ -5,7 +5,7 @@ defmodule Rockelivery.UsersControllerTest do
 
   describe "create/2" do
     test "when all params are valid, create the user", %{conn: conn} do
-      params = build(:user_params)
+      params = params_for(:user)
 
       response =
         conn
@@ -85,14 +85,12 @@ defmodule Rockelivery.UsersControllerTest do
         |> json_response(:ok)
 
       expected_response = %{
-        "user" => %{
-          "address" => user.address,
-          "age" => user.age,
-          "cpf" => user.cpf,
-          "email" => user.email,
-          "id" => user.id,
-          "name" => user.name
-        }
+        "address" => user.address,
+        "age" => user.age,
+        "cpf" => user.cpf,
+        "email" => user.email,
+        "id" => user.id,
+        "name" => user.name
       }
 
       assert response == expected_response
@@ -133,14 +131,12 @@ defmodule Rockelivery.UsersControllerTest do
         |> json_response(:ok)
 
         expected_response = %{
-          "user" => %{
-            "address" => user.address,
-            "age" => user.age,
-            "cpf" => user.cpf,
-            "email" => user.email,
-            "id" => user.id,
-            "name" => Map.get(update_params, "name")
-          }
+          "address" => user.address,
+          "age" => user.age,
+          "cpf" => user.cpf,
+          "email" => user.email,
+          "id" => user.id,
+          "name" => Map.get(update_params, "name")
         }
 
         assert response == expected_response

@@ -11,7 +11,7 @@ defmodule Rockelivery.CreateTest do
 
   describe "call/1" do
     test "when all params are valid, returns the user" do
-      params = build(:user_params)
+      params = params_for(:user)
 
       response = Create.call(params)
 
@@ -19,7 +19,7 @@ defmodule Rockelivery.CreateTest do
     end
 
     test "when there are invalid params, return an error" do
-      params = build(:user_params, %{"password" => "123"})
+      params = params_for(:user, password: "123")
 
       response = Create.call(params)
 

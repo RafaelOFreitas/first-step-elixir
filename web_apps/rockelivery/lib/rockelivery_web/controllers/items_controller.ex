@@ -1,21 +1,21 @@
-defmodule RockeliveryWeb.UsersController do
+defmodule RockeliveryWeb.ItemsController do
   use RockeliveryWeb, :controller
 
-  alias Rockelivery.User
+  alias Rockelivery.Item
   alias RockeliveryWeb.FallbackController
 
   action_fallback FallbackController
 
   def create(conn, params) do
-    with {:ok, %User{} = user} <- Rockelivery.create_user(params) do
+    with {:ok, %Item{} = item} <- Rockelivery.create_item(params) do
       conn
       |> put_status(:created)
-      |> render("create.json", user: user)
+      |> render("create.json", item: item)
     end
   end
 
   def delete(conn, %{"id" => id}) do
-    with {:ok, %User{}} <- Rockelivery.delete_user(id) do
+    with {:ok, %Item{}} <- Rockelivery.delete_item(id) do
       conn
       |> put_status(:no_content)
       |> text("")
@@ -23,26 +23,26 @@ defmodule RockeliveryWeb.UsersController do
   end
 
   def index(conn, _params) do
-    with {:ok, users} <- Rockelivery.list_users() do
+    with {:ok, items} <- Rockelivery.list_items() do
       conn
       |> put_status(:ok)
-      |> render("user.json", users: users)
+      |> render("item.json", items: items)
     end
   end
 
   def show(conn, %{"id" => id}) do
-    with {:ok, %User{} = user} <- Rockelivery.get_user_by_id(id) do
+    with {:ok, %Item{} = item} <- Rockelivery.get_item_by_id(id) do
       conn
       |> put_status(:ok)
-      |> render("user.json", user: user)
+      |> render("item.json", item: item)
     end
   end
 
   def update(conn, params) do
-    with {:ok, %User{} = user} <- Rockelivery.update_user(params) do
+    with {:ok, %Item{} = item} <- Rockelivery.update_item(params) do
       conn
       |> put_status(:ok)
-      |> render("user.json", user: user)
+      |> render("item.json", item: item)
     end
   end
 end

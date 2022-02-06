@@ -10,5 +10,7 @@ defmodule RockeliveryWeb.UsersView do
     }
   end
 
-  def render("user.json", %{user: %User{} = user}), do: %{user: user}
+  def render("user.json", %{user: %User{} = user}), do: render_one(user, RockeliveryWeb.UsersView, "user.json")
+  def render("user.json", %{users: users}) when is_list(users), do: render_many(users, RockeliveryWeb.UsersView, "user.json")
+  def render("user.json", %{users: %User{} = user}), do: user
 end
