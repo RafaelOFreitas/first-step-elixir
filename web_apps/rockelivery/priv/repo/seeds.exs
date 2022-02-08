@@ -14,7 +14,7 @@ import Rockelivery.Factory
 
 Faker.start()
 
-_user = insert(:user, id: "f4bafaa2-a878-430d-af4c-2d0c2e40d15d")
+_user = insert(:user, id: "ac5b97c8-f8b9-462f-8103-675b94caefe9")
 
 _item_1 = insert(:item, id: "6835cc18-3b52-411c-be3a-5453f046167c")
 _item_2 = insert(:item, id: "da039f9d-3bc8-4b1d-bcd7-97d2d5f9c010")

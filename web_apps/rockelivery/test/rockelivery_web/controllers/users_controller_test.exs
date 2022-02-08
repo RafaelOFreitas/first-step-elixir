@@ -5,6 +5,7 @@ defmodule Rockelivery.UsersControllerTest do
   import Rockelivery.Factory
 
   alias Rockelivery.ViaCep.ClientMock
+  alias RockeliveryWeb.Auth.Guardian
 
   describe "create/2" do
     test "when all params are valid, create the user", %{conn: conn} do
@@ -59,9 +60,9 @@ defmodule Rockelivery.UsersControllerTest do
   end
 
   describe "delete/2" do
-    test "when there is a user with the given id, deletes the user", %{conn: conn} do
-      user = insert(:user)
+    setup [:sign_in_user]
 
+    test "when there is a user with the given id, deletes the user", %{conn: conn, user: user} do
       response =
         conn
         |> delete(Routes.users_path(conn, :delete, user.id))
@@ -83,9 +84,9 @@ defmodule Rockelivery.UsersControllerTest do
   end
 
   describe "show/2" do
-    test "when there is a user with the given id, shows the user", %{conn: conn} do
-      user = insert(:user)
+    setup [:sign_in_user]
 
+    test "when there is a user with the given id, shows the user", %{conn: conn, user: user} do
       response =
         conn
         |> get(Routes.users_path(conn, :show, user.id))
@@ -127,9 +128,9 @@ defmodule Rockelivery.UsersControllerTest do
   end
 
   describe "update/2" do
-    test "when there is a user with the given id, updates the user", %{conn: conn} do
-      user = insert(:user)
+    setup [:sign_in_user]
 
+    test "when there is a user with the given id, updates the user", %{conn: conn, user: user} do
       update_params = %{"name" => "Florentina Das Flores"}
 
       response =
@@ -137,16 +138,16 @@ defmodule Rockelivery.UsersControllerTest do
         |> put(Routes.users_path(conn, :update, user.id), update_params)
         |> json_response(:ok)
 
-        expected_response = %{
-          "address" => user.address,
-          "age" => user.age,
-          "cpf" => user.cpf,
-          "email" => user.email,
-          "id" => user.id,
-          "name" => Map.get(update_params, "name")
-        }
+      expected_response = %{
+        "address" => user.address,
+        "age" => user.age,
+        "cpf" => user.cpf,
+        "email" => user.email,
+        "id" => user.id,
+        "name" => Map.get(update_params, "name")
+      }
 
-        assert response == expected_response
+      assert response == expected_response
     end
 
     test "when given an id with non-existent user, return error message", %{conn: conn} do
@@ -161,5 +162,13 @@ defmodule Rockelivery.UsersControllerTest do
 
       assert response == expected_response
     end
+  end
+
+  defp sign_in_user(%{conn: conn}) do
+    user = insert(:user)
+    {:ok, token, _claims} = Guardian.encode_and_sign(user)
+    conn = put_req_header(conn, "authorization", "Bearer #{token}")
+
+    {:ok, conn: conn, user: user}
   end
 end

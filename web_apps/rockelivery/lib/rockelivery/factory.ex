@@ -5,13 +5,15 @@ defmodule Rockelivery.Factory do
   alias Faker.Food, as: FakerFood
   alias Faker.Internet, as: FakerInternet
   alias Faker.Person.PtBr, as: FakerPerson
-  alias Faker.String, as: FakerString
   alias Faker.Util, as: FakerUtil
   alias Faker.UUID, as: FakerUUID
   alias Rockelivery.{
     Item,
     User,
   }
+
+  @password "12345678"
+  @password_hash Pbkdf2.add_hash(@password).password_hash
 
   def user_factory do
     %User{
@@ -20,7 +22,8 @@ defmodule Rockelivery.Factory do
       cep: FakerUtil.format("%8d"),
       cpf: FakerUtil.format("%11d"),
       email: FakerInternet.email(),
-      password: FakerString.base64(8),
+      password_hash: @password_hash,
+      password: @password,
       name: FakerPerson.name(),
       id: FakerUUID.v4(),
     }

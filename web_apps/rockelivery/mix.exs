@@ -40,24 +40,29 @@ defmodule Rockelivery.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.5.9"},
-      {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
-      {:postgrex, ">= 0.0.0"},
-      {:phoenix_live_dashboard, "~> 0.4"},
-      {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"},
-      {:gettext, "~> 0.11"},
-      {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:pbkdf2_elixir, "~> 1.3"},
-      {:excoveralls, "~> 0.10", only: :test},
       {:ex_machina, "~> 2.7.0"},
       {:faker, "~> 0.16"},
-      {:tesla, "~> 1.4"},
+      {:gettext, "~> 0.11"},
+      {:guardian, "~> 2.0"},
       {:hackney, "~> 1.17.0"},
+      {:jason, "~> 1.0"},
+      {:pbkdf2_elixir, "~> 1.3"},
+      {:phoenix, "~> 1.5.9"},
+      {:phoenix_ecto, "~> 4.1"},
+      {:phoenix_live_dashboard, "~> 0.4"},
+      {:plug_cowboy, "~> 2.0"},
+      {:postgrex, ">= 0.0.0"},
+      {:telemetry_metrics, "~> 0.4"},
+      {:telemetry_poller, "~> 0.4"},
+      {:tesla, "~> 1.4"},
+
+      # dev test
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+
+      # test
       {:bypass, "~> 2.1", only: :test},
+      {:excoveralls, "~> 0.10", only: :test},
       {:mox, "~> 1.0", only: :test},
     ]
   end
