@@ -23,6 +23,7 @@ defmodule FoodDiaryWeb.ConnCase do
       import Plug.Conn
       import Phoenix.ConnTest
       import FoodDiaryWeb.ConnCase
+      import TestHelper
 
       alias FoodDiaryWeb.Router.Helpers, as: Routes
 
