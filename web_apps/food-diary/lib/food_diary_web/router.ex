@@ -11,6 +11,7 @@ defmodule FoodDiaryWeb.Router do
     forward "/graphiql",
       Absinthe.Plug.GraphiQL,
       schema: FoodDiaryWeb.Schema,
+      socket: FoodDiaryWeb.FoodSocket,
       interface: :playground
 
     forward "/graphql",
