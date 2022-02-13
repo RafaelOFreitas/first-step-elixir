@@ -10,6 +10,7 @@ defmodule Rockelivery.ViaCep.Client do
   @base_url "https://viacep.com.br/ws/"
   plug Tesla.Middleware.JSON
 
+  @impl true
   def get_cep_info(url \\ @base_url, cep) do
     "#{url}/#{cep}/json/"
     |> get()

@@ -9,11 +9,13 @@ defmodule Rockelivery.Factory do
   alias Faker.UUID, as: FakerUUID
   alias Rockelivery.{
     Item,
+    Order,
     User,
   }
 
   @password "12345678"
   @password_hash Pbkdf2.add_hash(@password).password_hash
+  @payment_methods [:money, :credit_card, :debit_card]
 
   def user_factory do
     %User{
@@ -32,10 +34,19 @@ defmodule Rockelivery.Factory do
   def item_factory do
     %Item{
       category: :food,
-      description: FakerFood.description(),
+      description: sequence("Food description "),
       price: Faker.random_between(10, 100),
       photo: "food.png",
       id: FakerUUID.v4(),
+    }
+  end
+
+  def order_factory do
+    %Order{
+      address: FakerAddress.street_address(),
+      comments: "With #{FakerFood.ingredient()}",
+      payment_method: @payment_methods |> Faker.Util.pick() |> to_string(),
+      user: build(:user),
     }
   end
 
